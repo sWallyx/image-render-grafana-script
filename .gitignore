@@ -1,1 +1,5 @@
+# Render folder
 graph_renders
+
+# MacOS binary file
+.DS_Store
