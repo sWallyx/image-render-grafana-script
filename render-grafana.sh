@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
 export GRAFANA_HOST="https://play.grafana.org"
+export DASHBOARD_NAME="graph-styles"
+# export API_KEY="eyJrIjoibGF2bG1Gb2tkbGY2YTd1cVJVVUVGdmU4am1ybTB5SnEiLCJuIjoidGVzdCIsImlkIjoxfQ=="
+
+panels_id=([3]=Bars [7]=CPU [17]=Request)
 
 # Grafana uses a weird timestamp values with timestamp + 000
 # still don't know what those 3 zeros mean
-export START_TIMESTAMP="1596643200000"
-export END_TIMESTAMP="1596646800000"
-export DASHBOARD_NAME="graph-styles"
-# export API_KEY="eyJrIjoibGF2bG1Gb2tkbGY2YTd1cVJVVUVGdmU4am1ybTB5SnEiLCJuIjoidGVzdCIsImlkIjoxfQ=="
-panels_id=([3]=Bars [7]=CPU [17]=Request)
+START_TIMESTAMP="1596643200000"
+END_TIMESTAMP="1596646800000"
 
 function get_render_chart(){
     DOWNLOAD_URL="${GRAFANA_HOST}/render/dashboard-solo/db/$DASHBOARD_NAME?panelId=${3}&from=${1}&to=${2}&width=1000&height=500"
