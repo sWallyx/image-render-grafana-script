@@ -15,8 +15,8 @@ function get_render_chart(){
     DOWNLOAD_URL="${GRAFANA_HOST}/render/dashboard-solo/db/$DASHBOARD_NAME?panelId=${3}&from=${1}&to=${2}&width=1000&height=500"
     
     # This can be made on Grafana dashboards using auth if you send the API key on the header
-    # curl -o graph_renders/${4}.png -H "Authorization: Bearer $API_KEY" $DOWNLOAD_URL
-    curl -o graph_renders/${4}.png $DOWNLOAD_URL
+    # curl -o graph_renders/"${4}"".png -H "Authorization: Bearer $API_KEY" "$DOWNLOAD_URL"
+    curl -o graph_renders/"${4}".png "$DOWNLOAD_URL"
 }
 
 mkdir -p graph_renders
