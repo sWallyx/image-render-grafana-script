@@ -2,7 +2,7 @@
 
 export GRAFANA_HOST="https://play.grafana.org"
 export DASHBOARD_NAME="graph-styles"
-# export API_KEY="eyJrIjoibGF2bG1Gb2tkbGY2YTd1cVJVVUVGdmU4am1ybTB5SnEiLCJuIjoidGVzdCIsImlkIjoxfQ=="
+# export API_KEY="YOUR_API_KEY"
 
 panels_id=([3]=Bars [7]=CPU [17]=Request)
 
