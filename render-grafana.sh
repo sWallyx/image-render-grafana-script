@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 export GRAFANA_HOST="https://play.grafana.org"
+
+# Grafana uses a weird timestamp values with timestamp + 000
+# still don't know what those 3 zeros mean
 export START_TIMESTAMP="1596643200000"
 export END_TIMESTAMP="1596646800000"
 export DASHBOARD_NAME="graph-styles"
